@@ -27,10 +27,6 @@
   },
   "merge-configs": {
     "rollup": {
-      "scripts": {
-        "build": "sapper build --legacy",
-        "export": "sapper export --legacy"
-      },
       "devDependencies": {
         "@babel/core": "^7.0.0",
         "@babel/plugin-syntax-dynamic-import": "^7.0.0",
