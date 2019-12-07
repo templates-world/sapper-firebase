@@ -1,11 +1,8 @@
 #!/bin/bash
 cd "$(dirname "$0")"
 
-if [ "$CI" ]; then
-	(umask 0077; echo "$SSH_KEY" > ~/ssh_key; echo "$SSH_KEY_ROLLUP" > ~/ssh_key_rollup; echo "$SSH_KEY_WEBPACK" > ~/ssh_key_webpack)
-	git config user.email $EMAIL
-	git config user.name '[bot]'
-fi
+git config user.email $EMAIL
+git config user.name '[bot]'
 
 # branch names
 ROLLUP=rollup
