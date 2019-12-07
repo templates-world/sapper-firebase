@@ -7,7 +7,6 @@
     "build": "sapper build --legacy && (cp -R ./__sapper__/build ./functions/__sapper__ || ncp ./__sapper__/build ./functions/__sapper__/build)",
     "export": "sapper export --legacy",
     "start": "npm run build && firebase serve",
-    "predeploy": "npm run build",
     "prebuild": "rm -rf functions/__sapper__/build && mkdir -p functions/__sapper__/build || (rimraf - functions/__sapper__/build && mkdirp functions/__sapper__/build)",
     "deploy": "firebase deploy",
     "cy:run": "cypress run",
@@ -21,7 +20,10 @@
   },
   "devDependencies": {
     "firebase-tools": "^7.9.0",
+    "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0",
     "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.0",
     "sapper": "^0.27.0",
     "svelte": "^3.0.0"
   },
