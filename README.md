@@ -1,6 +1,6 @@
-# sapper-template
+# sapper-firebase
 
-The default [Sapper](https://github.com/sveltejs/sapper) template, available for Rollup and webpack.
+The default [Sapper](https://github.com/sveltejs/sapper) template with firebase hosting support, available for Rollup and webpack.
 
 
 ## Getting started
@@ -12,9 +12,9 @@ The default [Sapper](https://github.com/sveltejs/sapper) template, available for
 
 ```bash
 # for Rollup
-npx degit "sveltejs/sapper-template#rollup" my-app
+npx degit "Olyno/sapper-firebase#rollup" my-app
 # for webpack
-npx degit "sveltejs/sapper-template#webpack" my-app
+npx degit "Olyno/sapper-firebase#webpack" my-app
 ```
 
 
@@ -102,6 +102,12 @@ Because of that, it's essential that the bundler doesn't treat the package as an
 ```bash
 npm install -D @sveltejs/svelte-virtual-list
 ```
+
+## Firebase support
+
+To support firebase hosting, you must change the name from ``your-project-name`` to the name of your firebase project in the ``.firebaserc`` file. After that, go into ``functions`` directory, and in the ``package.json`` file, edit ``node`` version to your node version (e.g node 13.4.3 should be ``13``).
+
+You can try the firebase version using ``npm start`` (or ``yarn start``).
 
 
 ## Bugs and feedback

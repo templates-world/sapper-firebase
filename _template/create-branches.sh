@@ -3,8 +3,8 @@ cd "$(dirname "$0")"/..
 
 HEAD=$(git rev-parse HEAD)
 
-ROLLUP=${1:-rollup}
-WEBPACK=${2:-webpack}
+ROLLUP=${1:rollup}
+WEBPACK=${2:webpack}
 
 echo "Creating $ROLLUP and $WEBPACK branches from $REV"
 
