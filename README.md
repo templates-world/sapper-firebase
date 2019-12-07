@@ -37,6 +37,18 @@ Open up [localhost:3000](http://localhost:3000) and start clicking around.
 
 Consult [sapper.svelte.dev](https://sapper.svelte.dev) for help getting started.
 
+To run your project as firebase project, here is the list of commands to do:
+
+```bash
+cd my-app
+npm install # or yarn
+cd functions
+npm install
+cd ..
+npm start
+```
+
+Open up [localhost:5000](http://localhost:5000) and start clicking around.
 
 ## Structure
 
@@ -81,16 +93,9 @@ import { files } from '@sapper/service-worker';
 Sapper uses Rollup or webpack to provide code-splitting and dynamic imports, as well as compiling your Svelte components. With webpack, it also provides hot module reloading. As long as you don't do anything daft, you can edit the configuration files to add whatever plugins you'd like.
 
 
-## Production mode and deployment
+## Deployment
 
-To start a production version of your app, run `npm run build && npm start`. This will disable live reloading, and activate the appropriate bundler plugins.
-
-You can deploy your application to any environment that supports Node 8 or above. As an example, to deploy to [Now](https://zeit.co/now), run these commands:
-
-```bash
-npm install -g now
-now
-```
+To deploy a version of your app, run `npm run deploy`.
 
 
 ## Using external components
