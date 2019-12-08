@@ -4,10 +4,9 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
-    "build": "sapper build --legacy && (cp -R ./__sapper__/build ./functions/__sapper__ || ncp ./__sapper__/build ./functions/__sapper__/build)",
+    "build": "sapper build --legacy && gulp",
     "export": "sapper export --legacy",
     "start": "npm run build && firebase serve",
-    "prebuild": "rm -rf functions/__sapper__/build && mkdir -p functions/__sapper__/build || (rimraf - functions/__sapper__/build && mkdirp functions/__sapper__/build)",
     "deploy": "firebase deploy",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
@@ -19,11 +18,10 @@
     "sirv": "^0.4.0"
   },
   "devDependencies": {
+    "del": "^5.1.0",
     "firebase-tools": "^7.9.0",
-    "mkdirp": "^0.5.1",
-    "ncp": "^2.0.0",
+    "gulp": "^4.0.2",
     "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.0",
     "sapper": "^0.27.0",
     "svelte": "^3.0.0"
   },
